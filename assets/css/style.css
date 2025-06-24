@@ -1,0 +1,211 @@
+/* 
+
+## Colors
+### Primary
+- Blue 500: #8bacda
+- Cyan 400: #00fff7
+
+### Neutral
+- Blue 950 (main BG): #0d192b
+- Blue 900 (card BG): #14253d
+- Blue 800 (line): #2f415b
+- White: #ffffff
+
+## Typography
+
+- Font size (paragraph): 18px
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+
+*/
+
+:root {
+  --blue-500: #8bacda;
+  --blue-800: #2f415b;
+  --blue-900: #14253d;
+  --blue-950: #0d192b;
+  --cyan-400: #00fff7;
+  --white: #ffffff;
+  --font: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 62.5%;
+  color: var(--blue-950);
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--blue-950);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin-inline: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 355px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  color: var(--blue-500);
+}
+
+.card {
+  background-color: var(--blue-900);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.image {
+  border-radius: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  max-width: 315px;
+  max-height: 315px;
+}
+
+.image img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  position: relative;
+  cursor: pointer;
+}
+
+.image::before {
+  content: "";
+  background-color: rgba(0, 255, 247, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 315px;
+  max-height: 315px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image:hover::before {
+  opacity: 1;
+}
+
+.image::after {
+  content: url("../images/icon-view.svg"); /* supondo que o ícone exista */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image:hover::after {
+  opacity: 1;
+}
+
+.title {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+.card-description {
+  line-height: 3.2rem;
+  margin-bottom: 30px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--blue-500);
+  padding-bottom: 20px;
+}
+
+.card-info-left,
+.card-info-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.7rem;
+}
+
+.card-info-left img,
+.card-info-right img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.card-info-left p {
+  color: var(--cyan-400);
+}
+
+.attribution {
+  display: flex;
+  color: var(--white);
+}
+
+.card-creator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-creator-image {
+  width: 50px;
+  height: 50px;
+}
+
+.card-creator-image img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+}
+
+.card-creator-info span {
+  color: var(--white);
+}
+
+.attribution {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--cyan-400);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  color: var(--grey-500);
+}
