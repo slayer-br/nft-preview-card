@@ -1,4 +1,4 @@
-# Frontend Mentor - NFT preview card component no Frontend Mentor
+# Frontend Mentor - NFT preview card component
 
 Esta é a minha solução para o desafio <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U" target="_blank" rel="noopener noreferrer">**NFT preview card component no Frontend Mentor**</a>. Os desafios do **Frontend Mentor** ajudam a melhorar suas habilidades de codificação ao construir projetos práticos e realistas.
 
